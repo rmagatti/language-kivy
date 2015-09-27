@@ -4,7 +4,7 @@
   "description": "Language definition for the Kivy Language",
   "keywords": ["kivy"
   ],
-  "repository": "https://github.com/atom/language-kivy",
+  "repository": "https://github.com/Ramalus/language-kivy.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
