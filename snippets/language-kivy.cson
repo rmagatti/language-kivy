@@ -1,0 +1,67 @@
+".source.kv":
+  but_id_text:
+    prefix: "but_id_text"
+    body: '''
+      
+      Button:
+      	id: $1
+      	text: '$1'
+      
+    '''
+  but_text:
+    prefix: "but_text"
+    body: '''
+      
+      Button:
+      	text: '$1'
+      
+    '''
+  grid_cols_rows:
+    prefix: "grid_cols_rows"
+    body: '''
+      
+      GridLayout:
+      	cols: $1
+      	rows: $2
+      
+    '''
+  lab_id_text:
+    prefix: "lab_id_text"
+    body: '''
+      
+      Label:
+      	id: $1
+      	text: '$2'
+      
+    '''
+  lab_text:
+    prefix: "lab_text"
+    body: '''
+      
+      Label:
+      	text: '$1'
+      
+    '''
+  popup_ok_cancel:
+    prefix: "popup_ok_cancel"
+    body: '''
+      
+      Popup:
+          id: ${1:popup}
+          title: '$2'
+          BoxLayout:
+              orientation: 'vertical'
+              on_press: $1.dismiss()
+              Label:
+                  text: '$3'
+              BoxLayout:
+                  size_hint: (1, .1)
+                  orientation: 'horizontal'
+                  Button:
+                      text: '${4:Ok}'
+                      on_press: $5
+                  Button:
+                      text: '${6:Cancel}'
+                      on_press: $1.dismiss()
+      
+    '''

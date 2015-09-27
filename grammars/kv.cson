@@ -1,0 +1,52 @@
+fileTypes: [
+  "kv"
+]
+name: "Kivy Syntax"
+patterns: [
+  {
+    match: "\\b(?:(import|from|as))\\b"
+    name: "keyword.control.import.kv"
+  }
+  {
+    captures:
+      "1":
+        name: "storage.type.class.kv"
+    match: "\\b(<.*>)\\b"
+  }
+  {
+    include: "#builtin_types_widgets_ui"
+  }
+  {
+    include: "#builtin_types_widgets_layouts"
+  }
+  {
+    include: "#builtin_attributes"
+  }
+  {
+    include: "#builtin_properties"
+  }
+  {
+    include: "source.python"
+  }
+]
+repository:
+  builtin_attributes:
+    match: "(?<!\\.)\\b(on_active|on_color|on_focus|on_node_collapse|on_node_expand|on_pause|on_press|on_release|on_resume|on_size|on_text|on_texture_size|on_touch_down|on_touch_up|on_value|on_collapse|on_collapse_alpha|on_pos|on_background_image|on_background_color|on_orientation|on_arrow_image|on_arrow_pos|on_touch_move|on_tex|on_play|on_index|on_slides|on_offset|on_checkbox_active|on_group|on_lexer|on_foreground_color|on_origin|on_radius|on_hsv|on_hsv|on_select|on_entry_added|on_entries_cleared|on_subentry_to_entry|on_remove_subentry|on_submit|on_children|on_anim_delay|on_texture|on_nocache|on_ref_press|on_scroll_complete|on_anim_alpha|on_open|on_dismiss|on_content|on_container|on_source|on_transform|on_pre_enter|on_enter|on_pre_leave|on_leave|on_complete|on_progress|on_current|on_viewport|on_effect_x|on_effect_y|on_effect_cls|on_panel|on_config|on_menu|on_close|on_config_change|on_is_open|on_sizable_from|on_do_default_tab|on_default_tab_text|on_tab_width|on_tab_height|on_tab_pos|on_parent|on_text_validate|on_double_tap|on_triple_tap|on_quad_touch|on_readonly|on_cursor|on_hint_text|on_padding_x|on_padding_y|on_load_func|on_root_options|on_position_change|on_duration_change|on_state|on_volume|on_video|on_alpha|on_annotation|on_position|on_fullscreen|on_key_down|on_key_up|on_opacity)\\b"
+    name: "entity.name.function.kv"
+  builtin_properties:
+    match: "(?<!\\.)\\b(Color|Line|Rectangle|Ellipse|active|anchor_x|anchor_y|app|background_color|background_down|background_normal|bar_color|bold|border|canvas|canvas\\.after|canvas\\.before|cap|center|center_x|center_y|col_default_width|col_force_default|color|cols|do_rotation|do_scale|do_scroll|do_translation|font_name|font_size|foreground_color|group|halign|height|id|italic|left|max|min|multiline|opacity|orientation|padding|points|pos|pos_hint|readonly|rgb|rgba|row_default_height|row_force_default|rows|scroll_x|scroll_y|separator_color|separator_height|size|size_hint|size_hint_x|size_hint_y|source|spacing|state|text|text_size|texture|top|valign|value|width)\\b"
+    name: "keyword.other.kv"
+  builtin_types_widgets_layouts:
+    match: "(?<!\\.)\\b(AnchorLayout|BoxLayout|FloatLayout|GridLayout|PageLayout|RelativeLayout|ScatterLayout|StackLayout)\\b"
+    name: "support.type.kv"
+  builtin_types_widgets_ui:
+    match: "(?<!\\.)\\b(Accordion|BorderImage|Bubble|BubbleButton|Button|Camera|Carousel|CheckBox|CodeInput|ColorPicker|Dropdown|FileChooser|Image|Label|ListView|Modalview|Popup|ProgressBar|Rst|RstDocument|Scatter|Slider|TextInput|Togglebutton|ScrollView|SelectableView|Slider|Spinner|Splitter|StencilView|Switch|TabbedPanel|TextInput|ToggleButton|TreeView|Video|VideoPlayer|VKeyboard|Widget)\\b"
+    name: "support.type.kv"
+scopeName: "source.kv"
+settings:
+  shellVariables: [
+    {
+      name: "TM_COMMENT_START"
+      value: "# "
+    }
+  ]

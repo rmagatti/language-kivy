@@ -1,0 +1,14 @@
+{
+  "name": "language-kivy",
+  "version": "0.0.1",
+  "description": "Language definition for the Kivy Language",
+  "keywords": ["kivy"
+  ],
+  "repository": "https://github.com/atom/language-kivy",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
