@@ -4,6 +4,10 @@ fileTypes: [
 name: "Kivy Syntax"
 patterns: [
   {
+    match: "\\b(root)\\b"
+    name: "variable.language.self.kv"
+  }
+  {
     match: "\\b(?:(import|from|as))\\b"
     name: "keyword.control.import.kv"
   }
