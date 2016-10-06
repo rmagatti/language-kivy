@@ -5,7 +5,7 @@
   "keywords": [
     "kivy"
   ],
-  "repository": "https://github.com/LeMinaw/language-kivy.git",
+  "repository": "https://github.com/Ramalus/language-kivy.git",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
