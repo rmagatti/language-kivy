@@ -5,5 +5,5 @@
 ## 0.1.1 - Update
 * Adding new keywords
 
-## 0.1.2 - Update
+## 0.2.0 - Update
 * Added some more missing keywords
